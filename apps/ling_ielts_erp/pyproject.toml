@@ -1,0 +1,13 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "ling_ielts_erp"
+version = "0.0.1"
+description = "Ling IELTS ERP Custom App"
+authors = [{name = "Ling IELTS Team", email = "admin@lingielts.vn"}]
+dependencies = []
+
+[tool.flit.module]
+name = "ling_ielts_erp"

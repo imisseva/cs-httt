@@ -1,0 +1,6 @@
+app_name = "ling_ielts_erp"
+app_title = "Ling IELTS ERP"
+app_publisher = "Ling IELTS Team"
+app_description = "Ling IELTS ERP Custom App"
+app_email = "admin@lingielts.vn"
+app_license = "mit"

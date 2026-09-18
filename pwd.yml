@@ -9,6 +9,7 @@ services:
     volumes:
       - sites:/home/frappe/frappe-bench/sites
       - logs:/home/frappe/frappe-bench/logs
+      - ./apps/ling_ielts_erp:/home/frappe/frappe-bench/apps/ling_ielts_erp
     environment:
       DB_HOST: db
       DB_PORT: "3306"
@@ -46,6 +47,7 @@ services:
     volumes:
       - sites:/home/frappe/frappe-bench/sites
       - logs:/home/frappe/frappe-bench/logs
+      - ./apps/ling_ielts_erp:/home/frappe/frappe-bench/apps/ling_ielts_erp
 
   create-site:
     image: frappe/erpnext:v15.86.0
@@ -57,6 +59,7 @@ services:
     volumes:
       - sites:/home/frappe/frappe-bench/sites
       - logs:/home/frappe/frappe-bench/logs
+      - ./apps/ling_ielts_erp:/home/frappe/frappe-bench/apps/ling_ielts_erp
     entrypoint:
       - bash
       - -c
@@ -131,6 +134,7 @@ services:
     volumes:
       - sites:/home/frappe/frappe-bench/sites
       - logs:/home/frappe/frappe-bench/logs
+      - ./apps/ling_ielts_erp:/home/frappe/frappe-bench/apps/ling_ielts_erp
     ports:
       - "8080:8080"
 
@@ -149,6 +153,7 @@ services:
     volumes:
       - sites:/home/frappe/frappe-bench/sites
       - logs:/home/frappe/frappe-bench/logs
+      - ./apps/ling_ielts_erp:/home/frappe/frappe-bench/apps/ling_ielts_erp
     environment:
       FRAPPE_REDIS_CACHE: redis://redis-cache:6379
       FRAPPE_REDIS_QUEUE: redis://redis-queue:6379
@@ -171,6 +176,7 @@ services:
     volumes:
       - sites:/home/frappe/frappe-bench/sites
       - logs:/home/frappe/frappe-bench/logs
+      - ./apps/ling_ielts_erp:/home/frappe/frappe-bench/apps/ling_ielts_erp
     environment:
       FRAPPE_REDIS_CACHE: redis://redis-cache:6379
       FRAPPE_REDIS_QUEUE: redis://redis-queue:6379
@@ -209,6 +215,7 @@ services:
     volumes:
       - sites:/home/frappe/frappe-bench/sites
       - logs:/home/frappe/frappe-bench/logs
+      - ./apps/ling_ielts_erp:/home/frappe/frappe-bench/apps/ling_ielts_erp
     depends_on:
       configurator:
         condition: service_completed_successfully
@@ -229,6 +236,7 @@ services:
     volumes:
       - sites:/home/frappe/frappe-bench/sites
       - logs:/home/frappe/frappe-bench/logs
+      - ./apps/ling_ielts_erp:/home/frappe/frappe-bench/apps/ling_ielts_erp
     depends_on:
       configurator:
         condition: service_completed_successfully
