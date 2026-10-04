@@ -25,7 +25,10 @@ if ($backupFile) {
 
 # 4. Fix MariaDB User Permissions & Config
 Write-Host "[4/6] Cấu hình quyền CSDL MariaDB..." -ForegroundColor Yellow
-docker compose -f pwd.yml exec db mariadb -u root -padmin -e "ALTER USER '_5e5899d8398b5f7b'@'%' IDENTIFIED BY 'admin'; GRANT ALL PRIVILEGES ON *.* TO '_5e5899d8398b5f7b'@'%'; FLUSH PRIVILEGES;" 2>$null
+$dbUser = (docker compose -f pwd.yml exec backend cat /home/frappe/frappe-bench/sites/frontend/site_config.json 2>$null | ConvertFrom-Json).db_name
+if ($dbUser) {
+    docker compose -f pwd.yml exec db mariadb -u root -padmin -e "CREATE USER IF NOT EXISTS '$dbUser'@'%' IDENTIFIED BY 'admin'; ALTER USER '$dbUser'@'%' IDENTIFIED BY 'admin'; GRANT ALL PRIVILEGES ON *.* TO '$dbUser'@'%'; FLUSH PRIVILEGES;" 2>$null
+}
 docker compose -f pwd.yml exec backend bench --site frontend set-config db_password admin 2>$null
 
 # 5. Migrate & Restart Services
