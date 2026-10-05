@@ -1,0 +1,65 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-09-18 13:18:20.658371",
+  "name": "Approve",
+  "workflow_action_name": "Approve"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-09-18 13:18:20.659479",
+  "name": "Reject",
+  "workflow_action_name": "Reject"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-09-18 13:18:20.660140",
+  "name": "Review",
+  "workflow_action_name": "Review"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-10-04 21:27:42.252488",
+  "name": "Send Request",
+  "workflow_action_name": "Send Request"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-10-05 15:52:24.843552",
+  "name": "Pending Calculation",
+  "workflow_action_name": "Pending Calculation"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-10-05 15:52:48.080040",
+  "name": "Submit Proposal",
+  "workflow_action_name": "Submit Proposal"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-10-05 15:54:25.671521",
+  "name": "Calculate & Notice",
+  "workflow_action_name": "Calculate & Notice"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-10-05 15:56:55.141523",
+  "name": "Agree & Pay",
+  "workflow_action_name": "Agree & Pay"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-10-05 15:57:15.462890",
+  "name": "Decline",
+  "workflow_action_name": "Decline"
+ }
+]
